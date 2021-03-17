@@ -16,6 +16,25 @@ const Addresses = [
     address:
       "Jl. Pendidikan No.117, Sidakarya, Kec. Denpasar Sel., Kota Denpasar, Bali 80224",
   },
+  {
+    location: "Gojek",
+    address:
+      "Pasaraya Blok M Gedung B Lt. 6, Jl. Iskandarsyah II No.7, RT.3/RW.1, Melawai, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160",
+  },
+  {
+    location: "Shopee Indonesia",
+    address:
+      "Pacific Century Place Tower Lt. 26 SCBD (Sudirman Central Business District) Lot 10, Jl. Jend. Sudirman No.52-53, RT.5/RW.3, Senayan, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12190",
+  },
+  {
+    location: "Senayan City",
+    address:
+      " Jl. Asia Afrika No.19, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270",
+  },
+  {
+    location: "Beachwalk Shopping Center",
+    address: "Jl. Pantai Kuta, Kuta, Kabupaten Badung, Bali 80361",
+  },
 ];
 
 const ModalContent = styled.div`
@@ -51,7 +70,7 @@ const SearchResult = styled.div`
 
 export default function SearchModal({ closeModal }) {
   const [input, setInput] = useState("");
-  const [addresslist, setAddresslist] = useState();
+  const [addresslist, setAddresslist] = useState(Addresses);
   const updateInput = async (value) => {
     if (value !== "") {
       const filtered = Addresses.filter((address) => {
@@ -60,7 +79,7 @@ export default function SearchModal({ closeModal }) {
       setInput(value);
       setAddresslist(filtered);
     } else {
-      setAddresslist(null);
+      setAddresslist(Addresses);
     }
   };
   const dispatch = useDispatch();
