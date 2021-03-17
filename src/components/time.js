@@ -14,7 +14,7 @@ const TimeList = styled.div`
   background: #fff;
   width: 96%;
   transition: top 0.6s;
-  z-index: 0;
+  z-index: 1;
   border-top: 1px solid #f1f1f2;
 
   .navbar--hidden {

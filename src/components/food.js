@@ -71,6 +71,10 @@ const AddButton = styled.button`
   place-items: center;
 `;
 
+const Rating = styled(StarRatings)`
+  z-index: -1;
+`;
+
 export default function Food({ title, img, merchant, price, review }) {
   const dispatch = useDispatch();
 
@@ -84,7 +88,7 @@ export default function Food({ title, img, merchant, price, review }) {
       <Details>
         <h4>
           {review} &nbsp;
-          <StarRatings
+          <Rating
             rating={review}
             starRatedColor="#f9423a"
             starDimension="16px"
