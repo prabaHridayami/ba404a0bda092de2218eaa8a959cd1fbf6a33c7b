@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { changeLocation } from "../actions";
-
 const Result = styled.div`
   display: grid;
   grid-auto-flow: column;
